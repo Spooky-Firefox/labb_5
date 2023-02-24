@@ -36,7 +36,7 @@ abstract class CalculatorButton extends JButton implements ActionListener {
     }
 
     public String toString(){
-        return this.symbol;
+        return "Button <" + this.symbol + ">";
     }
     abstract public void transition();
 }
