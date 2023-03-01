@@ -59,16 +59,16 @@ public class GUI extends JFrame {
         // creating all buttons
 
         //
-        ArrayList<JPanel> digits = new ArrayList<>(10);
+        ArrayList<JButton> digits = new ArrayList<>(10);
         for (int i = 0; i < 10; i++) {
-            digits.add(panelButton(new DigitButton(String.valueOf(i),sit)));
+            digits.add(new DigitButton(String.valueOf(i),sit));
         }
-        JPanel divButton = panelButton(new BinOpButton("/", sit, (x, y) -> x/y));
-        JPanel mulButton = panelButton(new BinOpButton("*", sit, (x, y) -> x*y));
-        JPanel subButton = panelButton(new BinOpButton("-", sit, (x, y) -> x-y));
-        JPanel addButton = panelButton(new BinOpButton("+", sit, (x, y) -> x+y));
-        JPanel equButton = panelButton(new EqualsButton(sit));
-        JPanel canButton = panelButton(new CancelButton(sit));
+        JButton divButton = new BinOpButton("/", sit, (x, y) -> x/y);
+        JButton mulButton = new BinOpButton("*", sit, (x, y) -> x*y);
+        JButton subButton = new BinOpButton("-", sit, (x, y) -> x-y);
+        JButton addButton = new BinOpButton("+", sit, (x, y) -> x+y);
+        JButton equButton = new EqualsButton(sit);
+        JButton canButton = new CancelButton(sit);
 
         // adding buttons
         keyPad.add(digits.get(7)); keyPad.add(digits.get(8)); keyPad.add(digits.get(9)); keyPad.add(divButton);
@@ -78,12 +78,6 @@ public class GUI extends JFrame {
 
         this.pack();
         setVisible(true);
-    }
-    private JPanel panelButton(JButton button){
-        JPanel panel = new JPanel();
-        panel.add(button);
-        panel.setBorder(BorderFactory.createLineBorder(Color.BLACK,2,true));
-        return panel;
     }
     public static void main(String[] args) {
         new GUI();
