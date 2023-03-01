@@ -25,13 +25,7 @@ abstract class CalculatorButton extends JButton implements ActionListener {
 
         // adding an action listener
         this.addActionListener(this);
-        this.setBorder(
-                BorderFactory.createCompoundBorder(
-                        BorderFactory.createLineBorder(KEYPAD_COLOR,MARGIN), // this is a workaround, since EmptyBorder
-                        // isn't transparent and lett the underlying object color be seen
-                        //BorderFactory.createEmptyBorder(MARGIN, MARGIN, MARGIN, MARGIN),
-                        BorderFactory.createLineBorder(BORDER_COLOR, BORDER_THICKNESS,ROUNDED_BORDER)
-                ));
+        this.setBorder(BorderFactory.createLineBorder(KEYPAD_COLOR,MARGIN));
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -39,7 +33,7 @@ abstract class CalculatorButton extends JButton implements ActionListener {
     }
 
     public void setColor(Color color) {
-        super.setBackground(color);
+        this.setBorder(BorderFactory.createLineBorder(color,MARGIN));
     }
 
     public String toString() {
