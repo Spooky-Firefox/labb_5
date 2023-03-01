@@ -69,7 +69,7 @@ public class GUI extends JFrame {
         keyPad.add(digits.get(7)); keyPad.add(digits.get(8)); keyPad.add(digits.get(9)); keyPad.add(divButton);
         keyPad.add(digits.get(4)); keyPad.add(digits.get(5)); keyPad.add(digits.get(6)); keyPad.add(mulButton);
         keyPad.add(digits.get(1)); keyPad.add(digits.get(2)); keyPad.add(digits.get(3)); keyPad.add(subButton);
-        keyPad.add(digits.get(0)); keyPad.add(canButton); keyPad.add(equButton); keyPad.add(addButton);
+        keyPad.add(digits.get(0)); keyPad.add(equButton); keyPad.add(canButton); keyPad.add(addButton);
 
         this.pack();
         setVisible(true);
