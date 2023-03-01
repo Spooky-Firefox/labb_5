@@ -5,14 +5,12 @@ import controller.CancelButton;
 import controller.DigitButton;
 import controller.EqualsButton;
 import model.Situation;
-import tools.GlobalConstants;
 
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
 import java.awt.*;
 import java.util.ArrayList;
 
-import static tools.GlobalConstants.FONT;
+import static tools.GlobalConstants.*;
 
 public class GUI extends JFrame {
     public GUI(){
@@ -25,16 +23,13 @@ public class GUI extends JFrame {
         gcd.weightx = 0.8; // fill 100% of empty space in x
         gcd.weighty = 0.8;
 
-        canvas.setBackground(new Color(230, 208, 222)); // color is for debug
-
         // add canvas to Jframe
         this.add(canvas);
 
         // add the display
         JLabel display = new JLabel("1234");
         display.setFont(FONT);
-        display.setBackground(new Color(255, 204, 153)); // color is for debugging
-        display.setOpaque(true);
+        display.setBorder(BorderFactory.createLineBorder(BORDER_COLOR,BORDER_THICKNESS,ROUNDED_BORDER));
         display.setHorizontalAlignment(SwingConstants.RIGHT); // set text to right
 
 
@@ -45,7 +40,7 @@ public class GUI extends JFrame {
 
         // create a keypad
         JPanel keyPad = new JPanel(new GridLayout(4,4));
-        keyPad.setBackground(new Color(213, 232, 212));
+        keyPad.setBackground(KEYPAD_COLOR); // cant be seen, se CalculatorButton
 
         // add keyPad att grid pos 0,1
         gcd.gridx = 0;
