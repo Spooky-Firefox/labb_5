@@ -2,7 +2,9 @@ package controller;
 
 import model.Situation;
 
-public class CancelButton extends CalculatorButton{
+import static tools.GlobalConstants.KEYPAD_COLOR;
+
+public class CancelButton extends CalculatorButton {
     public CancelButton(Situation situation) {
         super("C", situation);
     }
@@ -11,20 +13,27 @@ public class CancelButton extends CalculatorButton{
     public void transition() {
         switch (this.situation.state) {
             case Input1:
-                this.situation.leftOperand = 0;
+                // set display to display 0
+                this.situation.display.setText("0");
                 break;
             case OpReady:
-                this.situation.leftOperand = 0;
-                // TODO: släck operator knapp!
+                // set display to display 0
+                this.situation.display.setText("0");
+                // clear color of selected operator
+                this.situation.binaryOperator.setColor(KEYPAD_COLOR);
+                // TODO change state to Input1
                 break;
             case Input2:
-                this.situation.leftOperand = 0;
-                this.situation.rightOperand = 0;
-                // TODO: släck operator knapp!
+                // set display to display 0
+                this.situation.display.setText("0");
+                // clear color of selected operator
+                this.situation.binaryOperator.setColor(KEYPAD_COLOR);
+                // TODO change state to Input1
                 break;
             case HasResult:
-                this.situation.leftOperand = 0;
-                // rightOperand bör bli 0:ad av = knappen ist
+                // set display to display 0
+                this.situation.display.setText("0");
+                // TODO change state to Input1
                 break;
         }
     }
