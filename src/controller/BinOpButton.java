@@ -4,6 +4,9 @@ import model.Situation;
 
 import java.util.function.IntBinaryOperator;
 
+import static tools.GlobalConstants.ACTIVE_COLOR;
+import static tools.GlobalConstants.KEYPAD_COLOR;
+
 public class BinOpButton extends CalculatorButton{
     private IntBinaryOperator operator;
     public BinOpButton(String symbol, Situation situation, IntBinaryOperator operator) {
@@ -13,6 +16,22 @@ public class BinOpButton extends CalculatorButton{
 
     @Override
     public void transition() {
-        //TODO
+        switch (this.situation.state) {
+            case Input1, HasResult:
+                // this is for color change
+                this.setColor(ACTIVE_COLOR);
+                // TODO go to OpReady save Display value to leftOperand and Clear Display
+                // code goes here
+
+                break;
+            case OpReady, Input2:
+                // this is for color change
+                this.setColor(ACTIVE_COLOR);
+                this.situation.binaryOperator.setColor(KEYPAD_COLOR);
+                // TODO Switch current operator
+                // code goes here
+
+                break;
+        }
     }
 }
