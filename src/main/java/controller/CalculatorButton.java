@@ -7,6 +7,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static tools.GlobalConstants.*;
+
 abstract class CalculatorButton extends JButton implements ActionListener {
     private String symbol;
     protected Situation situation;
@@ -18,25 +20,26 @@ abstract class CalculatorButton extends JButton implements ActionListener {
         this.situation = situation;
 
         // set color to gray
+        // TODO make Color.Gray a constant
         this.setBackground(Color.gray);
-        // TODO get rid of magic numbers
-        this.setPreferredSize(new Dimension(20, 20));
-        // TODO beter font handling, like a constant variable containing a font
-        this.setFont(new Font("Arial", 0, 15));
+        this.setPreferredSize(new Dimension(BUTTON_SIZE, BUTTON_SIZE));
+        this.setFont(FONT);
 
         // adding an action listener
         this.addActionListener(this);
     }
-    public void actionPerformed(ActionEvent e){
+
+    public void actionPerformed(ActionEvent e) {
         transition();
     }
 
-    public void setColor(Color color){
+    public void setColor(Color color) {
         super.setBackground(color);
     }
 
-    public String toString(){
+    public String toString() {
         return "Button <" + this.symbol + ">";
     }
+
     abstract public void transition();
 }
