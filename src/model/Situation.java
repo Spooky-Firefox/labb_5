@@ -10,7 +10,7 @@ public class Situation {
     public JLabel display;             // Visar första/andra talen när de slås in, sedan summan efter = knappen
     public BinOpButton binaryOperator; // Vilken av de 4 räknesätten (operator)
     public int leftOperand;            // Första talet
-    public int RightOperand;           // Andra talet (efter att operatorn ovan har valts)
+    public int rightOperand;           // Andra talet (efter att operatorn ovan har valts)
 
     public Situation(JLabel display){
         this.display = display;

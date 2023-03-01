@@ -3,5 +3,6 @@ public class Main {
         //TODO create a instance of situation and GUI
     	
     	//Test David!
+    	System.out.println("test");
     }
 }
