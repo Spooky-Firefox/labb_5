@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 import static tools.GlobalConstants.*;
 
 abstract class CalculatorButton extends JButton implements ActionListener {
-    private String symbol;
+    protected String symbol;
     protected Situation situation;
 
     public CalculatorButton(String symbol, Situation situation) {
