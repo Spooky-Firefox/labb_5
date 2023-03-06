@@ -1,7 +1,7 @@
 package controller;
 
 import static tools.GlobalConstants.KEYPAD_COLOR;
-
+import tools.State;
 import model.Situation;
 
 public class DigitButton extends CalculatorButton{
@@ -22,9 +22,13 @@ public class DigitButton extends CalculatorButton{
     			break;
     			}
     		case OpReady:
-                this.situation.display.setText(this.situation.display.getText()+ super.symbol);
+                this.situation.display.setText(super.symbol);
+                this.situation.state = State.Input2;
                 break;
-    	
+    		case HasResult:
+    			this.situation.display.setText(super.symbol);
+    			this.situation.state = State.Input1;
+                break;
     	}
 
     }
