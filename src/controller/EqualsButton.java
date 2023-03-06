@@ -19,7 +19,7 @@ public class EqualsButton extends CalculatorButton{
         case Input2:
         	Integer result = this.situation.binaryOperator.operator.applyAsInt(
         			this.situation.leftOperand, Integer.parseInt(this.situation.display.getText()));
-            this.situation.display.setText(result.toString()); // behöver sätta in left-operand-right
+            this.situation.display.setText(result.toString());
             this.situation.binaryOperator.setColor(KEYPAD_COLOR);
             this.situation.state = State.HasResult;
             break;
