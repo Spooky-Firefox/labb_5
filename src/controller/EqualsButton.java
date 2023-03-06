@@ -17,7 +17,9 @@ public class EqualsButton extends CalculatorButton{
             this.situation.display.setText(this.situation.display.getText()); //kanske inte behöver denna ens
             break;
         case Input2:
-            this.situation.display.setText("0");
+        	Integer result = this.situation.binaryOperator.operator.applyAsInt(
+        			this.situation.leftOperand, Integer.parseInt(this.situation.display.getText()));
+            this.situation.display.setText(result.toString()); // behöver sätta in left-operand-right
             this.situation.binaryOperator.setColor(KEYPAD_COLOR);
             this.situation.state = State.HasResult;
             break;
