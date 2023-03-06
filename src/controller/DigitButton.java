@@ -12,24 +12,17 @@ public class DigitButton extends CalculatorButton{
     @Override
     public void transition() {
     	switch (this.situation.state) {
-    		case Input1:
-    			this.situation.display.setText(super.symbol);
+    		case Input1, Input2:
+    			if (this.situation.display.getText()=="0") {
+    				this.situation.display.setText(super.symbol);
+    				break;
+    			}
+    			else {
+    			this.situation.display.setText(this.situation.display.getText()+ super.symbol);
     			break;
+    			}
     		case OpReady:
-                this.situation.display.setText("0");
-                // clear color of selected operator
-                this.situation.binaryOperator.setColor(KEYPAD_COLOR);
-                // TODO change state to Input1
-                break;
-    		case Input2:
-                this.situation.display.setText(super.symbol);
-                // clear color of selected operator
-                this.situation.binaryOperator.setColor(KEYPAD_COLOR);
-                // TODO change state to Input1
-                break;
-            case HasResult:
-                this.situation.display.setText("0");
-                // TODO change state to Input1
+                this.situation.display.setText(this.situation.display.getText()+ super.symbol);
                 break;
     	
     	}
