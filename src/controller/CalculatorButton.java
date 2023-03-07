@@ -19,6 +19,7 @@ abstract class CalculatorButton extends JButton implements ActionListener {
         this.symbol = symbol;
         this.situation = situation;
 
+		this.setFocusPainted(false);
         this.setBackground(BUTTON_COLOR);
         this.setPreferredSize(new Dimension(BUTTON_SIZE, BUTTON_SIZE));
         this.setFont(FONT);
