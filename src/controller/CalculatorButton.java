@@ -1,11 +1,11 @@
 package controller;
 
-import model.Situation;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import model.Situation;
 
 import static tools.GlobalConstants.*;
 
@@ -18,7 +18,6 @@ abstract class CalculatorButton extends JButton implements ActionListener {
 		super(symbol);
 		this.symbol = symbol;
 		this.situation = situation;
-
 		this.setFocusPainted(false);
 		this.setBackground(BUTTON_COLOR);
 		this.setPreferredSize(new Dimension(BUTTON_SIZE, BUTTON_SIZE));
@@ -33,6 +32,7 @@ abstract class CalculatorButton extends JButton implements ActionListener {
 		transition();
 	}
 
+	// Helper for setting the colour on button border
 	public void setColor(Color color) {
 		this.setBorder(BorderFactory.createLineBorder(color,MARGIN));
 	}
