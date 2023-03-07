@@ -2,11 +2,10 @@ package controller;
 
 import java.util.function.IntBinaryOperator;
 
+import model.State;
 import model.Situation;
-import tools.State;
-
-import static tools.GlobalConstants.ACTIVE_COLOR;
-import static tools.GlobalConstants.KEYPAD_COLOR;
+import static model.GlobalConstants.ACTIVE_COLOR;
+import static model.GlobalConstants.KEYPAD_COLOR;
 
 public class BinOpButton extends CalculatorButton{
 	public IntBinaryOperator operator;

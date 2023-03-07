@@ -1,9 +1,8 @@
 package controller;
 
-import tools.State;
+import model.State;
 import model.Situation;
-
-import static tools.GlobalConstants.KEYPAD_COLOR;
+import static model.GlobalConstants.KEYPAD_COLOR;
 
 public class DigitButton extends CalculatorButton{
 	public DigitButton(String symbol, Situation situation) {

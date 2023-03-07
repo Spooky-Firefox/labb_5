@@ -1,9 +1,8 @@
 package model;
 
-import controller.BinOpButton;
-import tools.State;
-
 import javax.swing.*;
+
+import controller.BinOpButton;
 
 public class Situation {
     public State state = State.Input1; // Tillstånd för miniräknaren (se Håkans tillståndsdiagram)

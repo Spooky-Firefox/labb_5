@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import controller.*;
 import model.Situation;
 
-import static tools.GlobalConstants.*;
+import static model.GlobalConstants.*;
 
 public class GUI extends JFrame {
 	public GUI(){

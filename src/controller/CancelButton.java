@@ -1,9 +1,8 @@
 package controller;
 
+import model.State;
 import model.Situation;
-import tools.State;
-
-import static tools.GlobalConstants.KEYPAD_COLOR;
+import static model.GlobalConstants.KEYPAD_COLOR;
 
 public class CancelButton extends CalculatorButton {
 	public CancelButton(Situation situation) {

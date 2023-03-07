@@ -6,8 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import model.Situation;
-
-import static tools.GlobalConstants.*;
+import static model.GlobalConstants.*;
 
 abstract class CalculatorButton extends JButton implements ActionListener {
 	protected String symbol;
