@@ -14,6 +14,7 @@ public class DigitButton extends CalculatorButton{
     	switch (this.situation.state) {
     		case Input1, Input2:
     			if (this.situation.display.getText()=="0") {
+    				System.out.println(super.symbol);
     				this.situation.display.setText(super.symbol);
     				break;
     			}
