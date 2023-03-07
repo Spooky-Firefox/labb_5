@@ -14,6 +14,7 @@ public class EqualsButton extends CalculatorButton{
     public void transition() {
     	switch (this.situation.state) {
         case Input1, OpReady, HasResult:
+        	this.situation.binaryOperator.setColor(KEYPAD_COLOR);
             this.situation.display.setText(this.situation.display.getText()); //kanske inte behöver denna ens
             break;
         case Input2:

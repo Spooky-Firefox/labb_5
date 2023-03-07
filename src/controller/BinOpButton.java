@@ -23,6 +23,8 @@ public class BinOpButton extends CalculatorButton{
                 this.setColor(ACTIVE_COLOR);
                 // TODO go to OpReady save Display value to leftOperand and Clear Display
                 // code goes here
+            	this.situation.leftOperand = Integer.parseInt(this.situation.display.getText());
+            
             	this.situation.state = State.OpReady;
             	
 
