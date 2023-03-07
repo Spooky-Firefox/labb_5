@@ -25,11 +25,12 @@ public class BinOpButton extends CalculatorButton{
                 // code goes here
             	this.situation.leftOperand = Integer.parseInt(this.situation.display.getText());
             
+            	
             	this.situation.state = State.OpReady;
             	
 
                 break;
-            case Input2:
+            case Input2, OpReady:
                 // this is for color change
                 this.setColor(ACTIVE_COLOR);
                 this.situation.binaryOperator.setColor(KEYPAD_COLOR);
