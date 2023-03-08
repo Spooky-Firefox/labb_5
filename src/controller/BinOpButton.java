@@ -8,7 +8,7 @@ import static model.GlobalConstants.ACTIVE_COLOR;
 import static model.GlobalConstants.KEYPAD_COLOR;
 
 public class BinOpButton extends CalculatorButton{
-	public IntBinaryOperator operator;
+	public final IntBinaryOperator operator;
 
 	public BinOpButton(String symbol, Situation situation, IntBinaryOperator operator) {
 		super(symbol, situation);

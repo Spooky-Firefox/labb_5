@@ -9,8 +9,8 @@ import model.Situation;
 import static model.GlobalConstants.*;
 
 abstract class CalculatorButton extends JButton implements ActionListener {
-	protected String symbol;
-	protected Situation situation;
+	protected final String symbol;
+	protected final Situation situation;
 
 	public CalculatorButton(String symbol, Situation situation) {
 		// initialize parent with symbol as visible text
