@@ -9,7 +9,13 @@ import model.Situation;
 
 import static model.GlobalConstants.*;
 
+/**
+ * A class representing a calculator GUI, with buttons and display, with its own state
+ */
 public class GUI extends JFrame {
+	/**
+	 * Creates the GUI and displays it on the screen
+	 */
 	public GUI(){
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -30,6 +36,7 @@ public class GUI extends JFrame {
 			BorderFactory.createLineBorder(BORDER_COLOR,BORDER_THICKNESS,ROUNDED_BORDER)
 		);
 		display.setHorizontalAlignment(SwingConstants.RIGHT); // set text to right
+
 		// add display att grid pos 0,0
 		gcd.gridx = 0;
 		gcd.gridy = 0;
@@ -41,6 +48,7 @@ public class GUI extends JFrame {
 		// create a keypad
 		JPanel keyPad = new JPanel(new GridLayout(4,4));
 		keyPad.setBackground(KEYPAD_COLOR); // cant be seen, se CalculatorButton
+
 		// add keyPad att grid pos 0,1
 		gcd.gridx = 0;
 		gcd.gridy = 1;
@@ -66,10 +74,5 @@ public class GUI extends JFrame {
 
 		this.pack();
 		setVisible(true);
-	}
-
-	public static void main(String[] args) {
-		// For testing
-		new GUI();
 	}
 }
