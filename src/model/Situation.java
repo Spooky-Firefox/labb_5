@@ -14,7 +14,7 @@ public class Situation {
     public int leftOperand;            // Första talet
 
     /**
-     * Returns the display of the calculator
+     * Creates the Situation with the given display
      * @param display the display
      */
     public Situation(JLabel display){
