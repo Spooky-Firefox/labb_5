@@ -21,7 +21,7 @@ public class CancelButton extends CalculatorButton {
 	 * Clears the display and changes state to Input1 while clearing active BinOpButton
 	 */
 	@Override
-	public void transition() {
+	protected void transition() {
 		// Clears the display
 		this.situation.display.setText("0");
 		this.situation.state = State.Input1;

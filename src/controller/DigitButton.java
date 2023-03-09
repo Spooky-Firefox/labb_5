@@ -25,7 +25,7 @@ public class DigitButton extends CalculatorButton{
 	 * if state is HasResult change state to Input1 and set display to symbol
 	 */
 	@Override
-	public void transition() {
+	protected void transition() {
 		switch (this.situation.state) {
 			case Input1, Input2:
 				String text = this.situation.display.getText();

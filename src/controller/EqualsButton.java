@@ -23,7 +23,7 @@ public class EqualsButton extends CalculatorButton{
 	 * if the state is not Input2 do nothing
 	 */
 	@Override
-	public void transition() {
+	protected void transition() {
 		// Do nothing for any state except Input2
 		if (this.situation.state != State.Input2) {
 			return;

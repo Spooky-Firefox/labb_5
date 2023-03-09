@@ -34,7 +34,7 @@ public class BinOpButton extends CalculatorButton{
 	 * if state is Input2 or OpReady change operator active operator
 	 */
 	@Override
-	public void transition() {
+	protected void transition() {
 		switch (this.situation.state) {
 			case Input1, HasResult:
 				// Switch to next state and store value

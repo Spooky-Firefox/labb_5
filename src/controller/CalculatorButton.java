@@ -64,5 +64,5 @@ abstract class CalculatorButton extends JButton implements ActionListener {
 	/**
 	 * a method that is called when the button is pressed, its purpose is often to modify state
 	 */
-	abstract public void transition();
+	abstract protected void transition();
 }
