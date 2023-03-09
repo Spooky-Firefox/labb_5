@@ -1,3 +1,4 @@
+package Main;
 import view.GUI;
 
 public class Main {
