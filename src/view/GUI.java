@@ -19,18 +19,18 @@ public class GUI extends JFrame {
 	public GUI(){
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		// add canvas to Jframe
+		// add canvas to JFrame
 		JPanel canvas = new JPanel(new GridBagLayout());
 		this.add(canvas);
 
-		// create constraints for the layoutmangor
+		// create constraints for the layoutmaneger
 		GridBagConstraints gcd = new GridBagConstraints();
-		gcd.fill = GridBagConstraints.BOTH; // set so all componets fill space as default
+		gcd.fill = GridBagConstraints.BOTH; // set so all components fill space as default
 		gcd.weightx = 0.8; // fill 100% of empty space in x
 		gcd.weighty = 0.8;
 
 		// add the display (with default number)
-		JLabel display = new JLabel("1234");
+		JLabel display = new JLabel("0");
 		display.setFont(FONT);
 		display.setBorder(
 			BorderFactory.createLineBorder(BORDER_COLOR,BORDER_THICKNESS,ROUNDED_BORDER)
