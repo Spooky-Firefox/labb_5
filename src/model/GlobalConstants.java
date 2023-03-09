@@ -4,6 +4,8 @@ import java.awt.*;
 
 /**
  * Contains global constants
+ *
+ * @author Kalle Hedberg, David Malmblad, Olle Ronstad, Alexander Svensson.
  */
 abstract public class GlobalConstants {
     /**

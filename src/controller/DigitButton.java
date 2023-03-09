@@ -5,6 +5,8 @@ import model.Situation;
 
 /**
  * A Button which allows to add/increase the value of the display
+ *
+ * @author Kalle Hedberg, David Malmblad, Olle Ronstad, Alexander Svensson.
  */
 public class DigitButton extends CalculatorButton{
 	/**

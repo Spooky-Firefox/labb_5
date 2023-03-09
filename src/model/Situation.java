@@ -6,6 +6,8 @@ import controller.BinOpButton;
 
 /**
  * Contains variabels and the state if the calculator such ass left operand, selected operator and display
+ *
+ * @author Kalle Hedberg, David Malmblad, Olle Ronstad, Alexander Svensson.
  */
 public class Situation {
     /**

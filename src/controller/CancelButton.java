@@ -6,6 +6,8 @@ import static model.GlobalConstants.KEYPAD_COLOR;
 
 /**
  * A button which clears the display and deselects the chosen operator
+ *
+ * @author Kalle Hedberg, David Malmblad, Olle Ronstad, Alexander Svensson.
  */
 public class CancelButton extends CalculatorButton {
 

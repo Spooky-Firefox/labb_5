@@ -6,6 +6,8 @@ import static model.GlobalConstants.KEYPAD_COLOR;
 
 /**
  * A class that set the display to the calculated value
+ *
+ * @author Kalle Hedberg, David Malmblad, Olle Ronstad, Alexander Svensson.
  */
 public class EqualsButton extends CalculatorButton{
 

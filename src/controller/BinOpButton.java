@@ -9,6 +9,8 @@ import static model.GlobalConstants.KEYPAD_COLOR;
 
 /**
  * A button which purpose is the give state a method to apply operations on data, and as well as change state
+ *
+ * @author Kalle Hedberg, David Malmblad, Olle Ronstad, Alexander Svensson.
  */
 public class BinOpButton extends CalculatorButton{
 	/**

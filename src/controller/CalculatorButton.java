@@ -10,6 +10,8 @@ import static model.GlobalConstants.*;
 
 /**
  * An abstract class that provides the functionality required to drive a simple button
+ *
+ * @author Kalle Hedberg, David Malmblad, Olle Ronstad, Alexander Svensson.
  */
 abstract class CalculatorButton extends JButton implements ActionListener {
 	protected final String symbol;

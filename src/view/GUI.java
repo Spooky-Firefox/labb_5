@@ -11,6 +11,8 @@ import static model.GlobalConstants.*;
 
 /**
  * A class representing a calculator GUI, with buttons and display, with its own state
+ *
+ * @author Kalle Hedberg, David Malmblad, Olle Ronstad, Alexander Svensson.
  */
 public class GUI extends JFrame {
 	/**
